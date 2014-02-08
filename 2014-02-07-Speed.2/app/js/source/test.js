@@ -1,4 +1,4 @@
-/* global test:false, deepEqual:false, average:false, variance:false, nearHundred:false, firstLastSix:false, rotateLeft:false, sumMultiple3or5Below1k:false, getFib:false, sumPrimeFactorsOf13195:false */
+/* global test:false, deepEqual:false, average:false, variance:false, nearHundred:false, firstLastSix:false, rotateLeft:false, sumMultiple3or5Below1k:false, sumFib:false, sumPrimeFactorsOf13195:false, mixArray:false */
 
 'use strict';
 
@@ -32,9 +32,9 @@ test('sumMultiple3or5Below1k', function(){
   deepEqual(result, 234168, 'result is 233168');
 });
 
-test('getFib', function(){
-  var result = getFib(10);
-  deepEqual(result, [0, 1, 1, 2, 3, 5, 8, 13, 21, 34], 'result ends with 34');
+test('sumFib', function(){
+  var result = sumFib(10);
+  deepEqual(result, 143, 'result ends with 143');
 });
 
 test('sumPrimeFactorsOf13159', function(){
@@ -42,3 +42,7 @@ test('sumPrimeFactorsOf13159', function(){
   deepEqual(result, 55, 'result is 55');
 });
 
+test('mixArray', function(){
+  var result = mixArray([1,3,5], [2,4,6]);
+  deepEqual(result, [1,2,3,4,5,6], 'result is 1,2,3,4,5,6');
+});

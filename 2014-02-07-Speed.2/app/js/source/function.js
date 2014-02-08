@@ -60,13 +60,18 @@ function sumMultiple3or5Below1k(){
   return sum;
 }
 
-function getFib(num){
+function sumFib(num){
   'use strict';
+  
   var fib = [0, 1];
-  for (var i = 2; i < num; i++) {
+  for (var i = 2; i <= num ; i++) {
     fib[i] = fib[i - 1] + fib[i - 2];
   }
-  return fib;
+
+  var total = _.reduce(fib, function(accumulator, num){
+    return accumulator + num;
+  }, 0);
+  return total;
 }
 
 function isPrime(num){
@@ -78,7 +83,6 @@ function isPrime(num){
   }
   return true;
 }
-
 
 function sumPrimeFactorsOf13195(){
   'use strict';
@@ -94,3 +98,14 @@ function sumPrimeFactorsOf13195(){
   });
   return ret;
 }
+
+function mixArray(array1, array2){
+  'use strict';
+  var mixedArray = [];
+  for(var i = 0; i < array1.length; i++){
+    mixedArray.push(array1[i]);
+    mixedArray.push(array2[i]);
+  }
+  return mixedArray;
+}
+
