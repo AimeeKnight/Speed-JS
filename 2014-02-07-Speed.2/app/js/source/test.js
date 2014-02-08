@@ -1,4 +1,4 @@
-/* global test:false, deepEqual:false, average:false, variance:false, nearHundred:false, firstLastSix:false, rotateLeft:false, sumMultiple3or5Below1k:false, sumFib:false, sumPrimeFactorsOf13195:false, mixArray:false */
+/* global test:false, deepEqual:false, average:false, variance:false, nearHundred:false, firstLastSix:false, rotateLeft:false, sumMultiple3or5Below1k:false, sumFib:false, sumPrimeFactorsOf13195:false, mixArray:false, sortEvenOdd:false */
 
 'use strict';
 
@@ -45,4 +45,9 @@ test('sumPrimeFactorsOf13159', function(){
 test('mixArray', function(){
   var result = mixArray([1,3,5], [2,4,6]);
   deepEqual(result, [1,2,3,4,5,6], 'result is 1,2,3,4,5,6');
+});
+
+test('sortEvenOdd', function(){
+  var result = sortEvenOdd([1,3,5,2,4,6]);
+  deepEqual(result, [2,4,6,1,3,5], 'result is 2,4,6,1,3,5');
 });

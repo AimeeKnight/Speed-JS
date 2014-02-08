@@ -109,3 +109,18 @@ function mixArray(array1, array2){
   return mixedArray;
 }
 
+function sortEvenOdd(nums){
+  'use strict';
+  var evens = [];
+  var odds = [];
+  for(var i = 0; i < nums.length; i++){
+    if (nums[i] % 2 === 0){
+      evens.push(nums[i]);
+    }else {
+      odds.push(nums[i]);
+    }
+  }
+  evens.sort();
+  odds.sort();
+  return evens.concat(odds);
+}
