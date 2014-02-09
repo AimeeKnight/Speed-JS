@@ -153,3 +153,21 @@ function replaceZeroMaxOddRight(nums){
   return nums;
 }
 
+/*
+function replaceZero(array){
+  'use strict';
+  var r = 0;
+  var index = array.length-1;
+
+  var newArray = _.forEachRight(array, function(num){
+      if(num === 0){
+        array[index] = r;
+        r = 0;
+      }else if(num % 2 !==0 && num > r){
+        r = num;
+      }
+      index--;
+    });
+  return newArray;
+}
+*/
