@@ -124,3 +124,32 @@ function sortEvenOdd(nums){
   odds.sort();
   return evens.concat(odds);
 }
+
+function replaceZeroMaxOddRight(nums){
+  'use strict';
+  var tempArray = [];
+  var firstZero, highest, temp;
+  debugger;
+  for (var i = 0; i <= nums.length; i++){
+
+    if (nums[i] === 0){
+      temp = i;
+      firstZero = 0;
+
+      for (var j = 1; j < nums.length - temp; j++){
+        if ((nums[temp + j] !== 0) && (nums[temp + j] % 2 !== 0)){
+          tempArray.push(nums[temp + j]);
+        }
+        if ((nums[temp + j] === 0) || (j === nums.length - temp -1) && tempArray.length > 1){
+          tempArray.sort();
+          highest = tempArray.pop();
+          nums[temp] = highest;
+          j = nums.length;
+          tempArray = [];
+        }
+      }
+    }
+  }
+  return nums;
+}
+

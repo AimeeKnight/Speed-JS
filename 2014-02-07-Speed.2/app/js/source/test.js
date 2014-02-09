@@ -1,4 +1,4 @@
-/* global test:false, deepEqual:false, average:false, variance:false, nearHundred:false, firstLastSix:false, rotateLeft:false, sumMultiple3or5Below1k:false, sumFib:false, sumPrimeFactorsOf13195:false, mixArray:false, sortEvenOdd:false */
+/* global test:false, deepEqual:false, average:false, variance:false, nearHundred:false, firstLastSix:false, rotateLeft:false, sumMultiple3or5Below1k:false, sumFib:false, sumPrimeFactorsOf13195:false, mixArray:false, sortEvenOdd:false, replaceZeroMaxOddRight:false */
 
 'use strict';
 
@@ -50,4 +50,9 @@ test('mixArray', function(){
 test('sortEvenOdd', function(){
   var result = sortEvenOdd([1,3,5,2,4,6]);
   deepEqual(result, [2,4,6,1,3,5], 'result is 2,4,6,1,3,5');
+});
+
+test('replaceZeroMaxOddRight', function(){
+  var result = replaceZeroMaxOddRight([1,0,3,5,2,0,4,6]);
+  deepEqual(result, [1,5,3,5,2,0,4,6], 'result is 1,5,3,5,2,4,4,6');
 });
