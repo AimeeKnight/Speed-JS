@@ -60,6 +60,10 @@ test('sortEvenOdd', function(){
 test('replaceZeroMaxOddRight', function(){
   var result = replaceZeroMaxOddRight([1,0,3,5,2,0,4,6]);
   deepEqual(result, [1,5,3,5,2,0,4,6], 'result is 1,5,3,5,2,4,4,6');
+  var result2 = replaceZeroMaxOddRight([1,0,3,2,5,0,2,0,4,6]);
+  deepEqual(result2, [1,5,3,2,5,0,2,0,4,6], 'result is 1,5,3,5,2,4,4,6');
+  var result3 = replaceZeroMaxOddRight([1,0,3,2,5,0,2,0,4,6,0,3,5]);
+  deepEqual(result3, [1,5,3,2,5,0,2,0,4,6,5,3,5], 'result is 1,5,3,5,2,4,4,6');
 });
 
 test('tripleUp', function(){

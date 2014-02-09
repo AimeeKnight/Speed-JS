@@ -132,46 +132,19 @@ function sortEvenOdd(nums){
 
 function replaceZeroMaxOddRight(nums){
   'use strict';
-  var tempArray = [];
-  var firstZero, highest, temp;
-  for (var i = 0; i <= nums.length; i++){
+  debugger;
+  var zeroIndex, highest = 0;
+  for (var i = 0; i < nums.length; i++){
 
     if (nums[i] === 0){
-      temp = i;
-      firstZero = 0;
-
-      for (var j = 1; j < nums.length - temp; j++){
-        if ((nums[temp + j] !== 0) && (nums[temp + j] % 2 !== 0)){
-          tempArray.push(nums[temp + j]);
-        }
-        if ((nums[temp + j] === 0) || (j === nums.length - temp -1) && tempArray.length > 1){
-          tempArray.sort();
-          highest = tempArray.pop();
-          nums[temp] = highest;
-          j = nums.length;
-          tempArray = [];
-        }
-      }
+      zeroIndex = i;
+    }
+    else if (nums[i] % 2 !== 0 && highest <= nums[i]){
+      highest = nums[i];
+      nums[zeroIndex] = highest;
     }
   }
   return nums;
-}
-
-function replaceZero(array){
-  'use strict';
-  var r = 0;
-  var index = array.length-1;
-
-  var newArray = _.forEachRight(array, function(num){
-      if(num === 0){
-        array[index] = r;
-        r = 0;
-      }else if(num % 2 !==0 && num > r){
-        r = num;
-      }
-      index--;
-    });
-  return newArray;
 }
 
 function tripleUp(nums){
