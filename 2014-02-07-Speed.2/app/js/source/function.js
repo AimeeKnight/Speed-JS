@@ -129,7 +129,6 @@ function replaceZeroMaxOddRight(nums){
   'use strict';
   var tempArray = [];
   var firstZero, highest, temp;
-  debugger;
   for (var i = 0; i <= nums.length; i++){
 
     if (nums[i] === 0){
@@ -153,7 +152,6 @@ function replaceZeroMaxOddRight(nums){
   return nums;
 }
 
-/*
 function replaceZero(array){
   'use strict';
   var r = 0;
@@ -170,4 +168,23 @@ function replaceZero(array){
     });
   return newArray;
 }
-*/
+
+function tripleUp(nums){
+  'use strict';
+  debugger;
+  var newArray = [];
+  for(var i = 0; i < nums.length; i++){
+    var num1 = nums[i];
+    var num2 = nums[i + 1];
+    if (num2 === num1 + 1){
+      var num3 = nums[i + 2];
+      if (num3 === num2 + 1){
+        newArray.push(num1);
+        newArray.push(num2);
+        newArray.push(num3);
+      }
+    }
+  }
+  return newArray;
+}
+
