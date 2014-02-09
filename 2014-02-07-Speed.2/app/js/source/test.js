@@ -1,4 +1,4 @@
-/* global test:false, deepEqual:false, average:false, variance:false, nearHundred:false, firstLastSix:false, rotateLeft:false, sumMultiple3or5Below1k:false, sumFib:false, sumPrimeFactorsOf13195:false, mixArray:false, sortEvenOdd:false, replaceZeroMaxOddRight:false, tripleUp:false */
+/* global test:false, deepEqual:false, average:false, variance:false, nearHundred:false, firstLastSix:false, rotateLeft:false, sumMultiple3or5Below1k:false, sumFib:false, sumPrimeFactorsOf13195:false, mixArray:false, sortEvenOdd:false, replaceZeroMaxOddRight:false, tripleUp:false, standardDeviation:false */
 
 'use strict';
 
@@ -10,6 +10,11 @@ test('average', function(){
 test('variance', function(){
   var vari = variance([1,2,3]);
   deepEqual(vari, 2, 'result is 2');
+});
+
+test('standardDeviation', function(){
+  var vari = standardDeviation([1,2,3,4,5]);
+  deepEqual(vari, 3.1622776601683795, 'result is 3.1622776601683795');
 });
 
 test('nearHundred', function(){

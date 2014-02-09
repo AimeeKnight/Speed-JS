@@ -18,6 +18,11 @@ function variance(nums){
   return sum;
 }
 
+function standardDeviation(nums){
+  'use strict';
+  return Math.sqrt(variance(nums));
+}
+
 function nearHundred(num){
   'use strict';
   var numStr = num.toString();
